@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Weather App+ 🌡️</title>
   </head>
 
@@ -11,6 +14,7 @@
     <div class="weather-app">
       <header>
         <h1>Castle Rock</h1>
+        <hr />
         <h2>Maine, USA</h2>
         <h3>Sunday, May 21, 1989</h3>
       </header>
@@ -25,16 +29,20 @@
           />
           <input type="submit" value="🔎" class="search-btn" />
         </form>
+        <div class="current-conditions-container"><div class="current-temp-and-icon">
         <img
           src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
           alt="few-clouds-day"
           class="current-weather-icon"
         />
-        <div class="current-temp">73°F</div>
-        <p>
-          Few Clouds — Feels like: 73°F<br />
-          Humidity: 58% — Wind Speed/Direction
-        </p>
+        <div class="current-temp">73°F</div></div>
+        <ul class="current-conditions">
+          <li>Few Clouds</li>
+          <li>Feels like:</li>
+          <li>Humidity:</li>
+          <li>Wind Speed:</li>
+        </ul>
+        </div>
       </main>
       <footer>
         ✨ This
