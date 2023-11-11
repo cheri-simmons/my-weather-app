@@ -14,12 +14,12 @@ function updateWeatherInterface(response) {
   temperatureElement.innerHTML = `${temperature}°`;
 
   let descriptionElement = document.querySelector("#description");
-  let description = response.data.condition.description;
+  let description = response.data.condition.description.toUpperCase();
   descriptionElement.innerHTML = description;
   /* capitalize first letters? */
 
   let feelsLikeElement = document.querySelector("#feels-like");
-  let feelsLike = response.data.temperature.feels_like;
+  let feelsLike = Math.round(response.data.temperature.feels_like);
   feelsLikeElement.innerHTML = `${feelsLike}°`;
 
   let humidityElement = document.querySelector("#humidity");

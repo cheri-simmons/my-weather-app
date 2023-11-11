@@ -10,7 +10,7 @@ body {
     rgba(100, 46, 122, 0.23) 100.2%
   );
   border-radius: 30px;
-  width: 850px;
+  width: 900px;
   height: 670px;
   padding: 30px 30px 10px 30px;
   margin: 50px auto;
@@ -35,6 +35,7 @@ h1,
 h2,
 h3 {
   margin: 0px;
+  color: #9896f1;
 }
 
 h1 {
@@ -100,6 +101,7 @@ footer {
 .current-description {
   font-weight: 700;
   font-size: 25px;
+  color: #9896f1;
 }
 
 .search-form {
@@ -141,4 +143,8 @@ footer {
   position: relative;
   bottom: 27px;
   font-weight: 500;
+}
+
+.current-temp-units {
+  color: #9896f1;
 }
