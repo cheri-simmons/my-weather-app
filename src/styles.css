@@ -5,8 +5,8 @@ body {
 .weather-app {
   background-color: #b9ceeb;
   border-radius: 20px;
-  width: 1000px;
-  height: 660px;
+  width: 800px;
+  height: 625px;
   padding: 30px 30px 10px 30px;
   margin: 50px auto;
   box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.2);
@@ -20,9 +20,10 @@ header {
   border: 2px solid #b9ceeb;
   border-radius: 50px;
   position: relative;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
 h1,
@@ -60,7 +61,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 30px;
@@ -74,7 +75,7 @@ footer {
   padding: 0px;
 }
 
-.current-temp {
+.large-temp {
   font-size: 70px;
   font-weight: 700;
 }
@@ -87,7 +88,7 @@ footer {
 
 .current-description {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .search-form {
@@ -111,4 +112,9 @@ footer {
   padding: 8px;
   font-size: 15px;
   box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.1);
+}
+
+.currently {
+  font-size: 20px;
+  font-style: italic;
 }
