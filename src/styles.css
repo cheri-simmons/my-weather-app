@@ -77,9 +77,11 @@ footer {
 .current-conditions {
   list-style: none;
   padding: 15px 25px;
+  border: 1px inset rgba(196, 193, 224, 0.5);
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   text-align: center;
+  box-shadow: 0px 0px 20px 5px inset rgba(196, 193, 224, 0.3);
 }
 
 .large-temp {
@@ -91,6 +93,8 @@ footer {
   width: 150px;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.4);
+  border: 1px inset rgba(196, 193, 224, 0.5);
+  box-shadow: 0px 0px 20px 5px inset rgba(196, 193, 224, 0.3);
 }
 
 .current-description {
@@ -111,9 +115,9 @@ footer {
   width: 300px;
   font-size: 15px;
   box-shadow: 0px 0px 15px 10px rgba(196, 193, 224, 0.3);
-  border: 2px solid rgba(196, 193, 224, 0.3);
   background-color: rgba(255, 233, 227, 0.5);
   text-align: center;
+  border: 1px outset rgba(196, 193, 224, 0.5);
 }
 
 .search-btn {
@@ -123,10 +127,10 @@ footer {
   padding: 8px;
   font-size: 15px;
   box-shadow: 0px 0px 15px 10px rgba(196, 193, 224, 0.3);
-  border: 2px solid rgba(196, 193, 224, 0.3);
+  border: 1px outset rgba(196, 193, 224, 0.5);
 }
 
 .currently {
   font-size: 20px;
-  font-style: italic;
+  text-align: center;
 }
