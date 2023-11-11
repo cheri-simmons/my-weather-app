@@ -35,7 +35,7 @@ h1,
 h2,
 h3 {
   margin: 0px;
-  color: #9896f1;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 h1 {
@@ -101,7 +101,7 @@ footer {
 .current-description {
   font-weight: 700;
   font-size: 25px;
-  color: #9896f1;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .search-form {
@@ -111,6 +111,7 @@ footer {
 }
 
 .search-input {
+  color: rgba(0, 0, 0, 0.6);
   border: none;
   border-radius: 30px;
   padding: 10px;
@@ -146,5 +147,5 @@ footer {
 }
 
 .current-temp-units {
-  color: #9896f1;
+  color: rgba(0, 0, 0, 0.6);
 }

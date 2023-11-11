@@ -1,7 +1,12 @@
 function updateWeatherInterface(response) {
   let cityElement = document.querySelector("#city");
   let city = response.data.city;
-  cityElement.innerHTML = city;
+  if (city != undefined) {
+    cityElement.innerHTML = city;
+  } else {
+    alert("The city could not be found. Please try again.");
+    return;
+  }
 
   let countryElement = document.querySelector("#country");
   let country = response.data.country;
@@ -16,7 +21,6 @@ function updateWeatherInterface(response) {
   let descriptionElement = document.querySelector("#description");
   let description = response.data.condition.description.toUpperCase();
   descriptionElement.innerHTML = description;
-  /* capitalize first letters? */
 
   let feelsLikeElement = document.querySelector("#feels-like");
   let feelsLike = Math.round(response.data.temperature.feels_like);
@@ -33,6 +37,15 @@ function updateWeatherInterface(response) {
   let windDirectionElement = document.querySelector("#wind-direction");
   let windDegree = response.data.wind.degree;
   windDirectionElement.innerHTML = getWindDirection(windDegree);
+
+  let iconElement = document.querySelector("#icon");
+  let icon = response.data.condition.icon_url;
+  let iconAltText = response.data.condition.icon;
+  iconElement.innerHTML = `<img
+            src=${icon}
+            alt=${iconAltText}
+            class="current-weather-icon"
+          />`;
 }
 
 function searchCity(city) {
