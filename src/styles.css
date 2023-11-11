@@ -11,7 +11,7 @@ body {
   );
   border-radius: 30px;
   width: 850px;
-  height: 650px;
+  height: 670px;
   padding: 30px 30px 10px 30px;
   margin: 50px auto;
   border: 2px outset rgba(196, 193, 224, 0.5);
@@ -47,6 +47,7 @@ h2 {
 
 h3 {
   font-size: 16px;
+  font-weight: 500;
 }
 
 hr {
@@ -133,4 +134,11 @@ footer {
   margin-top: 10px;
   font-size: 16px;
   text-align: center;
+}
+
+.temperature-units {
+  font-size: 25px;
+  position: relative;
+  bottom: 27px;
+  font-weight: 500;
 }

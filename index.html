@@ -11,23 +11,25 @@
       rel="stylesheet"
     />
     <title>Weather App+ 🌡️</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
 
   <body>
     <div class="weather-app">
       <header>
-        <h1>Castle Rock</h1>
+        <h1 id="city">—</h1>
         <hr />
-        <h2>Maine, USA</h2>
+        <h2 id="country">—</h2>
         <h3>Sunday, May 21, 1989</h3>
       </header>
 
       <main>
-        <form class="search-form">
+        <form class="search-form" id="search-input">
           <input
             type="search"
             placeholder="Find a new city—"
             class="search-input"
+            id="search-input-text"
             required
           />
           <input type="submit" value="🔎" class="search-btn" />
@@ -40,13 +42,17 @@
           />
           <div>
             <div class="currently">Currently:</div>
-            <div class="large-temp">73°F</div>
+            <div>
+              <span class="large-temp" id="temperature"></span
+              ><span class="temperature-units">F</span>
+            </div>
           </div>
-          <div class="current-description">Few Clouds</div>
+          <div class="current-description" id="description"></div>
           <ul class="current-conditions">
-            <li>🌡️ Feels like: —</li>
-            <li>💧 Humidity: —</li>
-            <li>🍃 Wind Speed: —</li>
+            <li>🌡️ Feels like: <span id="feels-like"></span></li>
+            <li>💧 Humidity: <span id="humidity"></span></li>
+            <li>🍃 Wind Speed: <span id="wind-speed"></span></li>
+            <li>🧭 Wind Direction: <span id="wind-direction"></span></li>
           </ul>
         </div>
       </main>
