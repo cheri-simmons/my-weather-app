@@ -10,8 +10,9 @@ function updateWeatherInterface(response) {
 
   let date = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#date");
+  let timeElement = document.querySelector("#time");
   dateElement.innerHTML = formatDate(date);
-
+  timeElement.innerHTML = formatTime(date);
   let countryElement = document.querySelector("#country");
   let country = response.data.country;
   countryElement.innerHTML = country;
@@ -88,6 +89,80 @@ function formatDate(date) {
   let month = months[date.getMonth()];
 
   return `${dayOfWeek}, ${month} ${day}, ${year}`;
+}
+
+function formatTime(date) {
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hour === 13) {
+    hour = 1;
+  } else {
+    if (hour === 14) {
+      hour = 2;
+    } else {
+      if (hour === 15) {
+        hour = 3;
+      } else {
+        if (hour === 16) {
+          hour = 4;
+        } else {
+          if (hour === 17) {
+            hour = 5;
+          } else {
+            if (hour === 18) {
+              hour = 6;
+            } else {
+              if (hour === 19) {
+                hour = 7;
+              } else {
+                if (hour === 20) {
+                  hour = 8;
+                }
+                if (hour === 21) {
+                  hour = 9;
+                } else {
+                  if (hour === 22) {
+                    hour = 10;
+                  } else {
+                    if (hour === 23) {
+                      hour = 11;
+                    } else {
+                      if (hour === 24) {
+                        hour = 12;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
+  return `${hour}:${minutes}`;
+}
+
+function getAmPm(date) {
+  let hour = date.getHours();
+  let amPm;
+
+  if (hour <= 11) {
+    amPm = "a.m.";
+  } else {
+    amPm = "p.m.";
+  }
+
+  return `${amPm}`;
 }
 
 function getWindDirection(degree) {
