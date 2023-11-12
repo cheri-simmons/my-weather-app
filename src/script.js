@@ -148,10 +148,6 @@ function formatTime(date) {
     }
   }
 
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
-
   return `${hour}:${minutes}`;
 }
 
