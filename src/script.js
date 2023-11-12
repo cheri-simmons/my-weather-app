@@ -11,8 +11,11 @@ function updateWeatherInterface(response) {
   let date = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#date");
   let timeElement = document.querySelector("#time");
+  let amPmElement = document.querySelector("#am-pm");
   dateElement.innerHTML = formatDate(date);
   timeElement.innerHTML = formatTime(date);
+  amPmElement.innerHTML = getAmPm(date);
+
   let countryElement = document.querySelector("#country");
   let country = response.data.country;
   countryElement.innerHTML = country;
@@ -157,9 +160,9 @@ function getAmPm(date) {
   let amPm;
 
   if (hour <= 11) {
-    amPm = "a.m.";
+    amPm = "am";
   } else {
-    amPm = "p.m.";
+    amPm = "pm";
   }
 
   return `${amPm}`;
