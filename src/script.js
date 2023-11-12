@@ -244,3 +244,35 @@ let searchFormElement = document.querySelector("#search-input");
 searchFormElement.addEventListener("submit", handleSearch);
 
 searchCity("Boston");
+
+/* Forecast Code */
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="forecast">
+            <div class="forecast-left">${day}</div>
+            <div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                alt="few-clouds-day"
+                class="forecast-icon"
+              />
+            </div>
+            <ul class="forecast-right">
+              <li class="daily-description">DESCRIPTION</li>
+              <li class="daily-average">Average: —</li>
+              <li class="daily-high-low">High: —<br />Low: —</li>
+            </ul>
+          </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();
