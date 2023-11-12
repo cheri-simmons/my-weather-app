@@ -73,8 +73,9 @@ footer {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  bottom: 10px;
-  left: 200px;
+  bottom: 8px;
+  left: 175px;
+  padding-top: 5px;
   border-top: 1px outset rgba(196, 193, 224, 0.5);
 }
 
