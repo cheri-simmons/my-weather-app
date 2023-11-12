@@ -129,7 +129,7 @@ footer {
 .search-form {
   position: absolute;
   right: 30px;
-  top: 10px;
+  top: 15px;
 }
 
 .search-input {
@@ -182,17 +182,17 @@ footer {
   height: 595px;
   position: absolute;
   right: 10px;
-  top: 60px;
+  top: 70px;
   box-shadow: 0px 0px 15px 10px rgba(196, 193, 224, 0.3);
   background-color: rgba(255, 233, 227, 0.5);
-  padding: 20px;
+  padding: 10px;
 }
 
 .forecast {
   border: 1px outset rgba(196, 193, 224, 0.5);
   border-radius: 30px;
   text-align: center;
-  height: 75px;
+  height: 110px;
   box-shadow: 0px 0px 15px 10px rgba(196, 193, 224, 0.3);
   background: radial-gradient(
     circle at 10% 20%,
@@ -219,7 +219,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   text-align: center;
-  padding: 5px 25px;
+  padding: 10px 20px;
   font-weight: 600;
 }
 
@@ -229,7 +229,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   text-align: center;
-  padding: 5px 25px;
+  padding: 10px 20px;
 }
 
 .daily-description {
