@@ -69,7 +69,7 @@ footer {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   left: 200px;
 }
 
@@ -170,10 +170,10 @@ footer {
   border: 1px outset rgba(196, 193, 224, 0.5);
   border-radius: 30px;
   width: 400px;
-  height: 560px;
+  height: 600px;
   position: absolute;
   right: 10px;
-  top: 80px;
+  top: 59px;
   box-shadow: 0px 0px 15px 10px rgba(196, 193, 224, 0.3);
   background-color: rgba(255, 233, 227, 0.5);
   padding: 20px;
@@ -184,4 +184,6 @@ footer {
   border-radius: 30px;
   text-align: center;
   height: 75px;
+  box-shadow: 0px 0px 15px 10px rgba(196, 193, 224, 0.3);
+  background-color: rgba(255, 233, 227, 0.5);
 }
