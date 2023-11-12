@@ -11,7 +11,7 @@ body {
   );
   border-radius: 30px;
   width: 800px;
-  height: 750px;
+  height: 700px;
   padding: 30px 30px 10px 30px;
   margin: 50px auto;
   border: 2px outset rgba(196, 193, 224, 0.5);
@@ -22,6 +22,7 @@ body {
 header {
   background-color: rgba(255, 233, 227, 0.5);
   width: 350px;
+  height: 150px;
   padding: 20px;
   text-align: center;
   border: 1px outset rgba(196, 193, 224, 0.5);
@@ -31,6 +32,9 @@ header {
   left: 10px;
   box-shadow: 0px 0px 15px 5px rgba(196, 193, 224, 0.3);
   color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 a {
@@ -80,7 +84,7 @@ footer {
   border-radius: 30px;
   box-shadow: 0px 0px 15px 5px rgba(196, 193, 224, 0.3);
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   left: 10px;
 }
 

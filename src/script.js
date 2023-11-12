@@ -8,11 +8,13 @@ function updateWeatherInterface(response) {
     return;
   }
 
+  let date = new Date(response.data.time * 1000);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(date);
+
   let countryElement = document.querySelector("#country");
   let country = response.data.country;
   countryElement.innerHTML = country;
-
-  /* format date function */
 
   let temperatureElement = document.querySelector("#temperature");
   let temperature = Math.round(response.data.temperature.current);
@@ -52,6 +54,40 @@ function searchCity(city) {
   let apiKey = "28d0aee1bcta18bbbo316447fb1d0b49";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(updateWeatherInterface);
+}
+
+function formatDate(date) {
+  let day = date.getDate();
+  let year = date.getFullYear();
+
+  let daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let dayOfWeek = daysOfWeek[date.getDay()];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+
+  return `${dayOfWeek}, ${month} ${day}, ${year}`;
 }
 
 function getWindDirection(degree) {
