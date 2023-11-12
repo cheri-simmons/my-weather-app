@@ -252,30 +252,50 @@ function getForecast(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[date.getDay()];
+}
+
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="forecast">
-            <div class="forecast-left">${day}</div>
+  let days = response.data.daily;
+  days.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="forecast">
+            <div class="forecast-left">${formatDay(day.time)}
+            </div>
             <div>
               <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                alt="few-clouds-day"
+                src=${day.condition.icon_url}
+                alt=${day.condition.icon}
                 class="forecast-icon"
               />
+              <div class="daily-description">${day.condition.description.toUpperCase()}</div>
             </div>
             <ul class="forecast-right">
-              <li class="daily-description">DESCRIPTION</li>
-              <li class="daily-average">Average: —</li>
-              <li class="daily-high-low">High: —<br />Low: —</li>
+              <li class="daily-average">Average: ${Math.round(
+                day.temperature.day
+              )}°</li>
+              <li class="daily-high-low">High: ${Math.round(
+                day.temperature.maximum
+              )}°<br />Low: ${Math.round(day.temperature.minimum)}°</li>
             </ul>
           </div>`;
+    }
   });
 
   forecastElement.innerHTML = forecastHtml;
