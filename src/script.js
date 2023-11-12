@@ -52,6 +52,8 @@ function updateWeatherInterface(response) {
             alt=${iconAltText}
             class="current-weather-icon"
           />`;
+
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -243,10 +245,14 @@ function handleSearch(event) {
 let searchFormElement = document.querySelector("#search-input");
 searchFormElement.addEventListener("submit", handleSearch);
 
-searchCity("Boston");
-
 /* Forecast Code */
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "28d0aee1bcta18bbbo316447fb1d0b49";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
@@ -275,4 +281,4 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHtml;
 }
 
-displayForecast();
+searchCity("Boston");
