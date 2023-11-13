@@ -1,14 +1,17 @@
 body {
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  background: #f4eeff;
 }
 
 .weather-app {
   position: relative;
-  width: 800px;
+  width: 785px;
   height: 700px;
   padding: 30px 30px 10px 30px;
   margin: 50px auto;
-  border: 1px solid #000;
+  border: 2px outset rgb(220, 214, 247);
+  border-radius: 20px;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
 header {
@@ -22,7 +25,9 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid #000;
+  border: 1px outset rgb(220, 214, 247);
+  border-radius: 20px;
+  background: rgba(220, 214, 247, 0.6);
 }
 
 a {
@@ -50,9 +55,12 @@ hr {
 
 footer {
   position: absolute;
-  bottom: 8px;
-  left: 175px;
-  border: 1px solid #000;
+  bottom: 5px;
+  left: 160px;
+  font-size: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  padding-top: 5px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .current-conditions-container {
@@ -64,14 +72,18 @@ footer {
   left: 10px;
   width: 350px;
   padding: 20px;
-  border: 1px solid #000;
+  border: 1px outset rgb(220, 214, 247);
+  border-radius: 20px;
+  background: rgba(220, 214, 247, 0.6);
 }
 
 .current-conditions {
   list-style: none;
   padding: 15px 25px;
   text-align: center;
-  border: 1px solid #000;
+  border: 1px inset rgb(220, 214, 247);
+  border-radius: 20px;
+  background-color:rgba(244, 238, 255, 0.6);
 }
 
 .large-temp {
@@ -80,7 +92,9 @@ footer {
 
 .current-weather-icon {
   width: 150px;
-  border: 1px solid #000;
+  border: 1px inset rgb(220, 214, 247);
+  border-radius: 50%;
+  background-color:rgba(244, 238, 255, 0.6);
 }
 
 .current-description {
@@ -98,13 +112,15 @@ footer {
   width: 350px;
   font-size: 15px;
   text-align: center;
-  border: 1px solid #000;
+  border: 1px outset rgb(220, 214, 247);
+  border-radius: 20px;
 }
 
 .search-btn {
   padding: 8px;
   font-size: 15px;
-  border: 1px solid #000;
+  border: 1px inset rgb(220, 214, 247);
+  border-radius: 20px;
 }
 
 .currently {
@@ -119,7 +135,7 @@ footer {
   bottom: 27px;
 }
 
-.current-temp-units {
+.current-temp {
 }
 
 .forecast-container {
@@ -127,12 +143,14 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   width: 400px;
-  height: 595px;
+  height: 600px;
   position: absolute;
   right: 10px;
   top: 70px;
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px outset rgb(220, 214, 247);
+  border-radius: 20px;
+  background: rgba(220, 214, 247, 0.6);
 }
 
 .forecast {
@@ -142,24 +160,33 @@ footer {
   justify-content: space-around;
   height: 110px;
   font-size: 12px;
-  border: 1px solid #000;
+  border: 1px outset rgb(220, 214, 247);
+  border-radius: 20px;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
 .forecast-icon {
   width: 65px;
   margin-bottom: 5px;
-  border: 1px solid #000;
+  border-radius: 50%;
+  background-color:rgba(244, 238, 255, 0.6);
+  border: 1px inset rgb(220, 214, 247);
+}
+
+.forecast-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .forecast-left {
-  text-align: center;
-  padding: 10px 20px;
-  border: 1px solid #000;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .forecast-right {
   list-style: none;
   text-align: center;
   padding: 10px 20px;
-  border: 1px solid #000;
 }
