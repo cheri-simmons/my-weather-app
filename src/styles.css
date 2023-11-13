@@ -12,6 +12,7 @@ body {
   border: 2px outset rgb(220, 214, 247);
   border-radius: 20px;
   background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  box-shadow: 0px 0px 30px 10px rgb(220, 214, 247);
 }
 
 header {
@@ -31,21 +32,29 @@ header {
 }
 
 a {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 h1,
 h2,
 h3 {
+  color: rgba(0, 0, 0, 0.6);
   margin: 0px;
 }
 
 h1 {
+  font-size: 50px;
+  font-weight: 600;
 }
 
 h2 {
+  font-size: 20px;
+  font-weight: 550;
 }
 
 h3 {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 hr {
@@ -83,22 +92,24 @@ footer {
   text-align: center;
   border: 1px inset rgb(220, 214, 247);
   border-radius: 20px;
-  background-color:rgba(244, 238, 255, 0.6);
+  background-color: rgba(244, 238, 255, 0.6);
 }
 
 .large-temp {
   font-size: 70px;
+  font-weight: 550;
 }
 
 .current-weather-icon {
   width: 150px;
   border: 1px inset rgb(220, 214, 247);
   border-radius: 50%;
-  background-color:rgba(244, 238, 255, 0.6);
+  background-color: rgba(244, 238, 255, 0.6);
 }
 
 .current-description {
   font-size: 25px;
+  font-weight: 500;
 }
 
 .search-form {
@@ -112,7 +123,7 @@ footer {
   width: 350px;
   font-size: 15px;
   text-align: center;
-  border: 1px outset rgb(220, 214, 247);
+  border: 1px inset rgb(220, 214, 247);
   border-radius: 20px;
   background: rgba(220, 214, 247, 0.6);
 }
@@ -135,9 +146,6 @@ footer {
   font-size: 30px;
   position: relative;
   bottom: 27px;
-}
-
-.current-temp {
 }
 
 .forecast-container {
@@ -171,7 +179,7 @@ footer {
   width: 65px;
   margin-bottom: 5px;
   border-radius: 50%;
-  background-color:rgba(244, 238, 255, 0.6);
+  background-color: rgba(244, 238, 255, 0.6);
   border: 1px inset rgb(220, 214, 247);
 }
 
