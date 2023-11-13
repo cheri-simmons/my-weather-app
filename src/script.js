@@ -278,7 +278,7 @@ function displayForecast(response) {
         `<div class="forecast">
             <div class="forecast-left">${formatDay(day.time)}
             </div>
-            <div>
+            <div class="forecast-middle">
               <img
                 src=${day.condition.icon_url}
                 alt=${day.condition.icon}
