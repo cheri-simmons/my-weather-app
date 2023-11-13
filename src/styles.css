@@ -114,6 +114,7 @@ footer {
   text-align: center;
   border: 1px outset rgb(220, 214, 247);
   border-radius: 20px;
+  background: rgba(220, 214, 247, 0.6);
 }
 
 .search-btn {
@@ -121,6 +122,7 @@ footer {
   font-size: 15px;
   border: 1px inset rgb(220, 214, 247);
   border-radius: 20px;
+  background: rgba(220, 214, 247, 0.6);
 }
 
 .currently {
