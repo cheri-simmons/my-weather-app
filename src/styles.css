@@ -84,6 +84,7 @@ footer {
   border: 1px outset rgb(220, 214, 247);
   border-radius: 20px;
   background: rgba(220, 214, 247, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .current-conditions {
@@ -161,6 +162,7 @@ footer {
   border: 1px outset rgb(220, 214, 247);
   border-radius: 20px;
   background: rgba(220, 214, 247, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .forecast {
@@ -188,10 +190,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
 
 .forecast-left {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -199,4 +202,27 @@ footer {
   list-style: none;
   text-align: center;
   padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.daily-average {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.daily-high {
+  color: rgba(79, 59, 120, 0.9);
+  font-weight: 550;
+}
+
+.daily-low {
+  color: rgb(146, 127, 191);
+  font-weight: 550;
+}
+
+.daily-description {
+  font-size: 12px;
+  font-weight: 600;
 }

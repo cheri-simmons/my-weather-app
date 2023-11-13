@@ -290,9 +290,11 @@ function displayForecast(response) {
               <li class="daily-average">Average: ${Math.round(
                 day.temperature.day
               )}°</li>
-              <li class="daily-high-low">High: ${Math.round(
+              <li class="daily-high-low"><span class="daily-high">High: ${Math.round(
                 day.temperature.maximum
-              )}°<br />Low: ${Math.round(day.temperature.minimum)}°</li>
+              )}°</span><br /><span class="daily-low">Low: ${Math.round(
+          day.temperature.minimum
+        )}°</span></li>
             </ul>
           </div>`;
     }
@@ -301,4 +303,4 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHtml;
 }
 
-searchCity("Boston");
+searchCity("Knoxville");
